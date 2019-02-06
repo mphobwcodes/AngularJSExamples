@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="module1HomeworkApp">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body ng-controller ="homeworkController">
+        <div class="container">
+                <h1>Module 1 Homework</h1>
+            <pre>{{appName}}</pre>
+            </div>
+            <script type="text/javascript">
+           // declaring the module
+                var module1HomeworkApp =angular.module("module1HomeworkApp", [])
+                .constant('myConfig', {applicationName:'The Current Date is:'});
+             //declaring the controller    
+                module1HomeworkApp.controller('homeworkController', [ 
+        '$scope', 'myConfig',
+        function($scope, myConfig){
+            $scope.appName = myConfig.applicationName;}
+            ]);</script>
+    
+</body>
+</html>

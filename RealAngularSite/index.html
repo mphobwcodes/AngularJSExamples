@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+    <!--ng-app tells AngularJS to be active in this portion of the page. in this case the entire document-->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AngularJS Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="todo.css" />
+    <!--Load AngularJS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+    <!--The behaviour is in javascrpt controller-->
+    <script src="todo.js"></script>
+</head>
+<body>
+    <h2>Todo</h2>
+    <div ng-controller="TodoListController as todoList">
+        <!--The behaviour of content under this element will be managed using the TodoListController class defined as todo.js-->
+        <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
+        <!--Instead of registering event-handlers, you declare which method on the controller to call. Here clicking the link will call archive() method-->
+        [<a href="" ng-click="todolist.archive()">archive</a>]
+        <ul class="unstyled">
+            <!--Use ng-repeat to unroll a collection. Here for every object in todos, AngularJS will create new copy of the <li> element.-->
+            <li ng-repeat= "todo in todoList.todos">
+                <label class="checkbox">
+                    <input type="checkbox" ng-model="todo.done">
+                    <span class= "done-{{todo.done}}">{{todo.text}}</span>
+                </label>
+
+            </li>
+        </ul>
+        <form ng-submit="todoList.addTodo()">
+            Test {{todoList.todoText}}
+            <input type="text" ng-model="todoList.todoText" size= "30"
+                placeholder ="add new todo here">
+                <input class ="btn-primary" type="submit" value="add">
+        </form>
+    </div>
+    
+</body>
+</html>
