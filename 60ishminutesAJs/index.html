@@ -18,6 +18,10 @@
 </li>
             </ul>
     </div>
+    <div ng-bind="addition">
+            <p> Addition: {{10+10}}</p>
+    </div>
+    
     <script>function SimpleController($scope){
         $scope.customers = [
             {name:'Dave Jones',city: 'Phoenix'},
@@ -26,8 +30,9 @@
 
         ];
     }
+  
         </script>
-    
+   
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
     
 </body>
