@@ -1,0 +1,54 @@
+Client side MVC
+Let's start with a concept that's core to Angular: client-side MVC
+
+MVC stands for Model, View, Controller. 
+
+Model: That's the data; the business information of the application.
+
+View: The HTML and presentation of the data. That's what the user sees and interacts with.
+
+Controller: The connector that makes all the different pieces of our application work together.
+
+The MVC pattern is a proven approach to organizing application code that's been refined over many years.
+
+Getting Started with AngularJS
+Adding Angular to your page
+
+We need to add the AngularJS library before we can get any of the Angular goodies working and see what they do. Let's do just that!
+
+Setup Scopes and Directives
+Setting up our app
+
+One of the most fundamental parts of Angular is scopes. Scopes hold your Models (that's your data), they cooperate with your Controllers, 
+and they give the Views everything they need (that's what the user sees and interacts with). Angular scopes operate in a very similar way
+to the common JavaScript concept of scope.
+
+The first scope we'll need is the application scope, this is exactly what you'd expect it to be: that's the scope your Angular application can operate in. 
+We set this up in our HTML using the ng-app attribute.
+
+The second scope is ng-controller; this will determine where our controller can operate. We can have multiple controllers within our application. Each controller
+will have its own scope. For example, we may have an inbox.html file, containing the below code.
+Both ng-app and ng-controller, are Angular directives. Think of an Angular directive as something that allows you to extend your HTML. 
+
+ngView and Routes
+Connect a URL to a scope
+Another important building block that can connect certain URLs of our application to scopes is the ng-view directive.
+The ng-view attribute here will tell Angular where we wish to inject HTML based on the URL a user visits.
+
+Modules
+Looking at angular.module()
+Every app needs a module, and Angular provides us with a namespacing capability for this using angular.module(). The method both sets and gets depending how you use 
+it. To create (set) a new module we do this:
+
+angular.module('myApp', []);
+
+Routing and Dependency Injection
+Routing
+
+
+What's a Factory?
+
+Angular Factories can be used for many different things. Some of the most common use-cases are server-side communication via HTTP and abstracting Models to persist
+application state and changes across controllers. Angular Factories are a great way to create reusable features and code blocks throughout our application.
+
+

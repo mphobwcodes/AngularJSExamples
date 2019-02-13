@@ -1,3 +1,18 @@
+Why AngularJS
+	HTML is great for declaring static documents, but it falters when we try to use it for declaring dynamic views in 
+	web-applications.AngularJS lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily
+	expressive, readable,and quick to develop.
+	
+Alternatives
+	Other frameworks deal with HTML’s shortcomings by either abstracting away HTML, CSS, and/or JavaScript or by providing an 
+	imperative way for manipulating the DOM. Neither of these address the root problem that HTML was not designed for dynamic views.
+
+Extensibility
+	AngularJS is a toolset for building the framework most suited to your application development. It is fully extensible and 
+	works well with other libraries. Every feature can be modified or replaced to suit your unique development workflow and 
+	feature needs. Read on to find out how.
+	
+	ADDING SOME CONTROLS
 Data Binding
 	Data-binding is an automatic way of updating the view whenever the model changes, as well as updating the model whenever the 
 	view changes. This is awesome because it eliminates DOM manipulation from the list of things you have to worry about.
@@ -9,3 +24,16 @@ Controller
 Plain Javascript
 	Unlike other frameworks, there is no need to inherit from proprietary types in order to wrap the model in accessors methods. 
 	AngularJS models are plain old JavaScript objects. This makes your code easy to test, maintain, reuse, and again free from boilerplate.
+
+		CREATING COMPONENTS
+Directives
+	Directives are a unique and powerful feature available in AngularJS. Directives let you invent new HTML syntax, specific 
+	to your application.
+	
+Reusable COMPONENTS
+	We use directives to create reusable components. A component allows you to hide complex DOM structure, CSS, and behavior. 
+	This lets you focus either on what the application does or how the application looks separately
+
+Localization
+	An important part of serious apps is localization. AngularJS's locale aware filters and stemming directives give you 
+	building blocks to make your application available in all locales.
